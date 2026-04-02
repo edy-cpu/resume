@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Эдуард Нигматуллин — Junior Product Manager</title>
+  <meta name="description" content="Резюме Эдуарда Нигматуллина — Junior Product Manager / Product Analyst / Project Manager (Digital)" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-soft: #101a2d;
+      --card: rgba(16, 26, 45, 0.78);
+      --card-solid: #111b2f;
+      --text: #eef4ff;
+      --muted: #aab7cf;
+      --line: rgba(255,255,255,0.08);
+      --accent: #2fb36f;
+      --accent-soft: rgba(47, 179, 111, 0.14);
+      --shadow: 0 18px 50px rgba(0,0,0,0.28);
+      --radius: 22px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at top left, rgba(47,179,111,0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(73,123,255,0.12), transparent 22%),
+        linear-gradient(180deg, #09111d 0%, #0b1220 100%);
+      color: var(--text);
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      padding: 32px 20px 56px;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 0.9fr;
+      gap: 20px;
+      align-items: stretch;
+      margin-bottom: 20px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: var(--radius);
+    }
+
+    .hero-main {
+      padding: 34px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #c9f1db;
+      border: 1px solid rgba(47,179,111,0.2);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.08;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-role {
+      font-size: 18px;
+      color: #d9e6fb;
+      margin: 0 0 16px;
+      font-weight: 600;
+    }
+
+    .hero-text {
+      font-size: 16px;
+      color: var(--muted);
+      margin: 0 0 24px;
+      max-width: 760px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 14px;
+      padding: 13px 18px;
+      font-weight: 700;
+      transition: 0.18s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #08120d;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.04);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.03);
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.05);
+    }
+
+    .hero-side {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .contact-label {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #7f91b3;
+      margin-bottom: 4px;
+    }
+
+    .contact-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: #edf3ff;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      color: #dce8fb;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      padding: 26px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin: 0 0 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .section p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .skill {
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+      color: #dfe9fb;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .full {
+      margin-bottom: 20px;
+    }
+
+    .experience-card {
+      padding: 24px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .experience-card + .experience-card {
+      margin-top: 14px;
+    }
+
+    .role-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .role-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f2f7ff;
+    }
+
+    .role-meta {
+      color: #8fa2c2;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #7f91b3;
+      font-size: 13px;
+      padding-top: 8px;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        padding: 18px 14px 36px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .section {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .hero-role {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+
+      <section class="hero">
+        <div class="panel hero-main">
+          <div class="eyebrow">Product / Project / Digital</div>
+          <h1>Эдуард Нигматуллин</h1>
+          <p class="hero-role">Junior Product Manager / Product Analyst</p>
+          <p class="hero-text">
+            Развиваюсь в направлении product- и project-ролей в digital-среде.
+            Использую Cursor, ChatGPT, VS Code и Codex для анализа задач, структурирования информации,
+            декомпозиции работы и организации процесса разработки. Сильная сторона — соединять
+            продуктовую логику, пользовательский сценарий и практическую реализацию:
+            от идеи и структуры до внедрения решений и улучшения UX.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:edy_13@mail.ru">Связаться</a>
+            <a class="btn btn-secondary" href="Resume_Eduard_Nigmatullin_Yandex_Polished.docx" download>Скачать Word</a>
+          </div>
+        </div>
+
+        <aside class="panel hero-side">
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-label">Город</span>
+              <span class="contact-value">Москва</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Телефон</span>
+              <span class="contact-value">+7 982 670-68-05</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">edy_13@mail.ru</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Фокус</span>
+              <span class="contact-value">Продуктовая логика, декомпозиция задач, запуск и развитие цифровых решений</span>
+            </div>
+          </div>
+
+          <div class="tag-row">
+            <span class="tag">Cursor</span>
+            <span class="tag">ChatGPT</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Codex</span>
+            <span class="tag">Bitrix24</span>
+            <span class="tag">1С</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="grid">
+        <div class="panel section">
+          <h2>Ключевые компетенции</h2>
+          <div class="skills">
+            <div class="skill">Декомпозиция задач и структурирование процессов</div>
+            <div class="skill">UI/UX-логика и постановка требований к интерфейсу</div>
+            <div class="skill">Product thinking и проработка пользовательских сценариев</div>
+            <div class="skill">Запуск и развитие цифровых решений</div>
+            <div class="skill">Аналитика и систематизация информации</div>
+            <div class="skill">Базовая техническая среда: сервер, домен, окружение</div>
+            <div class="skill">Организация работы через AI-инструменты и IDE</div>
+            <div class="skill">Быстрое освоение новых инструментов и процессов</div>
+          </div>
+        </div>
+
+        <div class="panel section">
+          <h2>Практический digital-опыт</h2>
+          <p>
+            Самостоятельная работа над веб-проектом с product / project-фокусом:
+            формирование идеи и логики продукта, декомпозиция работы на этапы,
+            проработка UX/UI, настройка базовой инфраструктуры и организация
+            процесса разработки через AI-инструменты.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel section full">
+        <h2>Опыт работы</h2>
+
+        <div class="experience-card">
+          <div class="role-line">
+            <div class="role-title">Официальный дилер LADA — менеджер по продажам / специалист отдела продаж</div>
+            <div class="role-meta">Москва · март 2018 — октябрь 2025</div>
+          </div>
+          <ul>
+            <li>Вёл полный цикл работы с клиентом: от первичного контакта и выявления потребности до завершения сделки и выдачи автомобиля.</li>
+            <li>Работал с возражениями, подбирал решение под реальный запрос клиента и удерживал интерес до покупки.</li>
+            <li>Использовал Bitrix24 и 1С, понимал логику CRM, этапов сделки, статусов клиента и внутренней аналитики.</li>
+            <li>Стабильно показывал сильные результаты в продажах; рекорд личных продаж — 43 автомобиля за месяц.</li>
+            <li>Входил в число сильных менеджеров по результатам продаж и качеству работы с клиентами.</li>
+            <li>Участвовал в развитии дилерского центра: адаптация новых сотрудников, обмен рабочими практиками, внутренние презентации.</li>
+          </ul>
+        </div>
+
+        <div class="experience-card">
+          <div class="role-line">
+            <div class="role-title">Собственный проект / бренд</div>
+            <div class="role-meta">Самостоятельный запуск и развитие продукта</div>
+          </div>
+          <ul>
+            <li>Запустил собственный проект с нуля: сформировал концепцию, бренд и визуальное позиционирование.</li>
+            <li>Самостоятельно продумал название, логотип, дизайн и визуальную подачу продукта.</li>
+            <li>Сравнивал варианты оборудования и подбирал решения под задачу и бюджет.</li>
+            <li>Организовал учёт расходов, прибыли и маржинальности, внедрил рабочие таблицы для контроля экономики продукта.</li>
+            <li>Разрабатывал карточки товара, материалы для продвижения и вёл продукт в digital-среде.</li>
+            <li>Создал и развивал Telegram-группу и бота как часть экосистемы проекта.</li>
+            <li>В дальнейшем полностью продал проект.</li>
+          </ul>
+        </div>
+
+        <div class="experience-card">
+          <div class="role-line">
+            <div class="role-title">РЖД — машинист тепловоза</div>
+            <div class="role-meta">Ранний профессиональный этап · рост внутри производственной среды</div>
+          </div>
+          <ul>
+            <li>Прошёл путь от практики слесарем до помощника машиниста и машиниста.</li>
+            <li>Работал в среде с высокой ответственностью, чёткими регламентами и требованиями к безопасности.</li>
+            <li>Сформировал дисциплину, внимательность к процессу и устойчивость к работе в ответственных условиях.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="panel section">
+          <h2>Образование</h2>
+          <p>
+            <strong>УГАХА / УрГАХА / УралГАХА</strong><br />
+            Экономика и управление на предприятии, высшее образование
+          </p>
+          <br />
+          <p>
+            <strong>Уральский железнодорожный техникум</strong><br />
+            Помощник машиниста, среднее специальное
+          </p>
+        </div>
+
+        <div class="panel section">
+          <h2>Инструменты</h2>
+          <p>
+            Cursor, ChatGPT, VS Code, Codex, OpenCode<br />
+            Bitrix24, 1С<br />
+            Базовая работа с сервером, доменом, окружением и цифровыми сервисами
+          </p>
+        </div>
+      </section>
+
+      <div class="footer">
+        Персональная страница-резюме
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
